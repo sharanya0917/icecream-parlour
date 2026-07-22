@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Parlour Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff3e0;
+            padding: 20px;
+        }
+        .order-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 { text-align: center; color: #d81b60; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input[type="text"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+        button {
+            width: 100%;
+            background-color: #d81b60;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover { background-color: #c2185b; }
+    </style>
+</head>
+<body>
+
+<div class="order-container">
+    <h2>🍦 Ice Cream Order Form</h2>
+    <form action="/submit-order" method="POST">
+        
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required placeholder="98765 43210">
+        </div>
+
+        <div class="form-group">
+            <label for="size">Select Size:</label>
+            <select id="size" name="size">
+                <option value="single">Single Scoop - $\(2.50\)</option>
+                <option value="double">Double Scoop - $\(4.00\)</option>
+                <option value="pint">Pint - $\(7.50\)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="flavor">Select Flavor:</label>
+            <select id="flavor" name="flavor">
+                <option value="vanilla">Classic Vanilla</option>
+                <option value="chocolate">Rich Chocolate</option>
+                <option value="strawberry">Strawberry Bliss</option>
+                <option value="mint">Mint Choc Chip</option>
+            </select>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <label>Select Toppings:</label><br>
+            <input type="checkbox" id="sprinkles" name="toppings" value="sprinkles">
+            <label for="sprinkles">Sprinkles</label>
+            
+            <input type="checkbox" id="fudge" name="toppings" value="fudge">
+            <label for="fudge">Hot Fudge</label>
+            
+            <input type="checkbox" id="nuts" name="toppings" value="nuts">
+            <label for="nuts">Crushed Nuts</label>
+        </div>
+
+        <div class="form-group">
+            <label for="instructions">Special Instructions:</label>
+            <textarea id="instructions" name="instructions" rows="3" placeholder="e.g., Extra waffle cone, melt-free packing..."></textarea>
+        </div>
+
+        <button type="submit">Place Order</button>
+    </form>
+</div>
+
+</body>
+</html>
