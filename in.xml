@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A simple database catalog of bookstore inventory -->
+<bookstore>
+
+    <book id="001" category="fiction">
+        <title lang="en">The Great Adventure</title>
+        <author>Jane Doe</author>
+        <year>2024</year>
+        <price currency="INR">599.00</price>
+        <inStock>true</inStock>
+    </book>
+
+    <book id="002" category="technology">
+        <title lang="en">Learning XML Basics</title>
+        <author>John Smith</author>
+        <year>2025</year>
+        <price currency="INR">849.00</price>
+        <inStock>false</inStock>
+    </book>
+
+    <book id="003" category="biography">
+        <title lang="en">A Life of Purpose</title>
+        <author>Alice Johnson</author>
+        <year>2023</year>
+        <price currency="INR">425.00</price>
+        <inStock>true</inStock>
+    </book>
+
+</bookstore>
